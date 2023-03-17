@@ -33,6 +33,28 @@ body{
     background-color: var(--bachground);
 }
 
+section{
+    padding: 2rem 7rem;
+}
+
+.heading{
+    text-align: center;
+    padding: 6rem 3rem;
+    padding-bottom: 15px;
+    font-size: 30px;
+}
+.heading h1{
+    font-size: 30px;
+    color: white;
+}
+
+.heading span{
+    color: var(--main-color);
+    text-transform: uppercase;
+
+}
+
+
 .logo{
   height: 100px;
 }
@@ -226,6 +248,134 @@ body{
     text-align: center;
 }
 
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(../images/2729960.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 540px;
+}
+
+.home .content h3{
+    font-size: 60px;
+    text-transform: uppercase;
+    color: var(--main-color);
+}
+
+.home .content p{
+    font-size: 20px;
+    font-weight: bolder;
+    line-height: 1.8;
+    padding: 1rem 0;
+    color: #eee;
+    color:rgb(255, 255, 255);
+
+    
+}
+
+.about .row{
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background-color: var(--bachground);
+    flex-wrap: wrap;
+    justify-content:center;
+    color: white;
+}
+
+.about .row .image{
+  flex: 1 1 45rem;
+  
+}
+
+.about .row .image img{
+    width: 60%;
+}
+
+.about .row image .content{
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+
+
+.about .row .content h3{
+    font-size: 25px;
+    color: white;
+}
+
+.about .row .content p{
+    font-size: 15px;
+    color:white;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.menu .boxContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px ,1fr));
+    gap: 1.5rem;
+}
+
+.menu .boxContainer .box{
+     padding: 5rem;
+    text-align: center; 
+    border:var(--border) ;
+}
+
+.menu .heading{
+    color: white;
+}
+
+.menu .boxContainer .box:hover{
+    background-color: rgb(174, 171, 171);
+}
+
+.menu .boxContainer .box:hover .price{
+    color: var(--black);
+}
+
+.menu .boxContainer .box:hover .price span{
+    color: var(--black);
+}
+
+.menu .boxContainer .box:hover h3{
+    color: var(--black);
+}
+
+.menu .boxContainer .box img{
+    height: 10rem;
+}
+
+.menu .boxContainer .box h3{
+    color: #fff;
+    font-size: 17px;
+    padding: 1rem 0;
+}
+
+.menu .boxContainer .box .price{
+    color: white;
+    font-size: 20px;
+    padding: 0.5rem 0;
+
+}
+
+.menu .boxContainer .box .price span{
+    color: white;
+    font-size: 15px;
+    text-decoration: line-through;
+    
+}
+
+.products .heading {
+    color: white;
+}
+
 
 
 
@@ -318,6 +468,19 @@ body{
         color: white;
         background-color: var(--main-color);
         cursor: pointer;
+    }
+    .home{
+        background-position: left;
+        justify-content:center;
+        text-align: center;
+    }
+
+    .home .content h3{
+        font-size: 35px;
+    }
+
+    .home .content p{
+        font-size: 20px;
     }
 }
 
