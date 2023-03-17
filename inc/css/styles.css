@@ -1,0 +1,344 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/static/EBGaramond-Medium.ttf);
+}
+
+:root {
+  --main-color: #eb4449;
+  --black: #13131a;
+  --bachground: #1a2127;
+  --border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+* {
+  font-family: Roboto;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear; /*Read it again*/
+}
+
+html{
+    font-size:15px;
+    overflow-x: hidden;
+    scroll-padding-top: 18px;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--bachground);
+}
+
+.logo{
+  height: 100px;
+}
+
+.logo img{
+    height: 100%;
+}
+
+.header{
+    background-color: var(--bachground);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+}
+
+.header .navbar a{
+    margin: 5px;
+    color: var(--main-color);
+    font-size: 17px;
+    color: white;
+
+}
+
+.header .navbar a:hover{
+    color: var(--main-color);
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+
+
+.header .icons div{
+    color: white;
+    cursor: pointer;
+    font-size: 17px;
+    margin: 5px;
+}
+
+.header .icons div:hover{
+    color: var(--main-color);
+}
+
+#menuButton{
+    display: none;
+}
+
+
+.header .searchForm{
+    position: absolute;
+    top: 115%;
+    right: 7%;
+    background-color: white;
+    width: 35rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;/* question*/
+}
+
+.header .searchForm.active{
+    transform: scaleY(1);
+}
+
+
+
+.header .searchForm input{
+    height: 100%;
+    width: 100%;
+    font-size: 17px;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;/*this is a question*/
+}
+
+.header .searchForm label{
+    cursor: pointer;
+    font-size: 17px;
+    margin-right: 1.5rem;
+    color: var(--black);
+}
+
+
+.header .searchForm label:hover{
+    color: var(--main-color);
+}
+
+
+.header .cartItemsContainer{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    height: calc(100vh - 9.5rem);
+    width: 30rem;
+    background-color: rgb(174, 171, 171);
+    padding: 0 1.5rem;
+    overflow-y: scroll;
+
+}
+
+.header .cartItemsContainer.active{
+    right: 0;
+    width: 100%;
+}
+
+
+
+.header .cartItemsContainer .cartItem{
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;/*question*/
+
+}
+
+.header .cartItemsContainer .cartItem .fa-times{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size:17px;
+    cursor: pointer;
+    color: var(--black);
+}
+
+.header .cartItemsContainer .cartItem .fa-times:hover{
+    color: var(--main-color);
+
+}
+
+
+.header .cartItemsContainer .cartItem .content h3{
+    font: 17px;
+    color: var(--black);
+    padding-bottom: 4px;
+}
+
+
+.header .cartItemsContainer .cartItem .content .price{
+    font-size: 15px;
+    color: #eb4449;
+}
+
+
+.firstPic{
+    height: 200px;
+
+}
+
+.firstPic img{
+    height: 100%;
+}
+
+
+.secondPic{
+    height: 200px;
+ 
+}
+
+.secondPic img{
+    height: 100%;
+}
+
+.btn{
+    margin-bottom: 15px;
+    display: inline-block;
+    padding: 10px 50px;
+    font-size: 17px;
+    color: white;
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+
+.btn:hover{
+    letter-spacing: 4px;
+    background-color: var(--black);
+    color: white;
+}
+
+
+.header .cartItemsContainer.active .btn{
+    width: 100%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media query */
+@media (max-width:900px ){
+    html{
+        font-size:8px;
+        
+    }
+    
+    .header{
+        padding: 2rem 2.5rem;
+    }
+  
+}
+
+@media (max-width:768px ){
+
+    #menuButton{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: rgb(174, 171, 171);;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+
+    .header .navbar.active{
+        right: 0;
+    }
+
+    .header .navbar a{
+        color: var(--black);
+        display: block;
+        margin: 1.5rem;
+        padding: .5rem;
+        font-size: 17px;
+    }
+
+    .header .searchForm{
+        width: 90%;
+        right: 16px;
+    }
+    .header .cartItemsContainer.active .btn{
+        width: 100%;
+        text-align: center;
+       
+    }
+
+    .btn{
+        margin-bottom: 100px;
+        display: inline-block;
+        padding: 10px 50px;
+        font-size: 17px;
+        color: white;
+        background-color: var(--main-color);
+        cursor: pointer;
+    }
+}
+
+@media (max-width:450px ){
+    html{
+        font-size:6px;
+        
+    }
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
