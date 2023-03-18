@@ -273,8 +273,8 @@ section{
     font-weight: bolder;
     line-height: 1.8;
     padding: 1rem 0;
-    color: #eee;
-    color:rgb(255, 255, 255);
+    color:rgb(0, 0, 0);
+    font-weight: bolder;
 
     
 }
