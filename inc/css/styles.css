@@ -81,7 +81,7 @@ section{
 .header .navbar a{
     margin: 5px;
     color: var(--main-color);
-    font-size: 17px;
+    font-size: 20px;
     color: white;
 
 }
@@ -442,6 +442,10 @@ section{
 }
 
 .review .heading{
+    color: white;
+}
+
+.contact .heading{
     color: white;
 }
 
