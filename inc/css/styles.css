@@ -265,6 +265,7 @@ section{
     font-size: 60px;
     text-transform: uppercase;
     color: var(--main-color);
+    margin-top: 100px;
 }
 
 .home .content p{
